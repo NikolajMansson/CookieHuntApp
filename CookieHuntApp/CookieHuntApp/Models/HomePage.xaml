@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CookieHuntApp.Models.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" x:Name="Tblogout" Clicked="Tblogout_OnClicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
