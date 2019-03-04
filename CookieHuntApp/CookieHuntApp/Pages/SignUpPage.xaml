@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookieHuntApp.Pages.SignUpPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="1" Margin="40,20,40,0">
+                <Entry Placeholder="Email" x:Name="EntEmail"/>
+                <Entry Placeholder="Password" x:Name="EntPassword" IsPassword="True"/>
+                <Entry Placeholder="Confirm Password" x:Name="EntConfirmPassword" IsPassword="True"/>
+                <Button Text="SIGN UP" BackgroundColor="LightCoral" x:Name="BtnSignUp" Clicked="BtnSignUp_OnClicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

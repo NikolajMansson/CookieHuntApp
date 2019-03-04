@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CookieHuntApp.Models;
+using CookieHuntApp.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +13,15 @@ namespace CookieHuntApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            if (!string.IsNullOrEmpty(Settings.Accesstoken))
+            {
+                MainPage = new NavigationPage(new HomePage());
+            }
+            else if (string.IsNullOrEmpty(Settings.UserName) && string.IsNullOrEmpty(Settings.Password))
+            {
+
+                MainPage = new NavigationPage(new SignInPage());
+            }
         }
 
         protected override void OnStart()
