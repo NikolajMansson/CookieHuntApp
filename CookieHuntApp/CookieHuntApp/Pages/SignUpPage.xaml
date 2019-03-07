@@ -8,11 +8,29 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+
+            <StackLayout x:Name="Logo" VerticalOptions="FillAndExpand" >
+                <Image x:Name="LogoIcon" Source="logo.png" Margin="0,80,0,0"/>
+            </StackLayout>
+
             <StackLayout Grid.Row="1" Margin="40,20,40,0">
                 <Entry Placeholder="Email" x:Name="EntEmail"/>
                 <Entry Placeholder="Password" x:Name="EntPassword" IsPassword="True"/>
                 <Entry Placeholder="Confirm Password" x:Name="EntConfirmPassword" IsPassword="True"/>
-                <Button Text="SIGN UP" BackgroundColor="LightCoral" x:Name="BtnSignUp" Clicked="BtnSignUp_OnClicked"/>
+                
+                <Button Text="SIGN UP" BackgroundColor="SandyBrown" TextColor="White" x:Name="BtnSignUp" Clicked="BtnSignUp_OnClicked"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Padding="20" Orientation="Horizontal" HorizontalOptions="Center" >
+                <Label Text="Or " />
+                <StackLayout Spacing="0">
+                    <Label Text="SIGN IN WITH EXISTING ACCOUNT" FontAttributes="Bold" />
+                    <BoxView BackgroundColor="Black" HeightRequest="1"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapSignIn" NumberOfTapsRequired="1" Tapped="TapSignIn_OnTapped">
+
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
