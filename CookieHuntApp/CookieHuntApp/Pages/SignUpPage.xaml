@@ -17,10 +17,9 @@
                 <Entry Placeholder="Email" x:Name="EntEmail"/>
                 <Entry Placeholder="Password" x:Name="EntPassword" IsPassword="True"/>
                 <Entry Placeholder="Confirm Password" x:Name="EntConfirmPassword" IsPassword="True"/>
-                
                 <Button Text="SIGN UP" BackgroundColor="SandyBrown" TextColor="White" x:Name="BtnSignUp" Clicked="BtnSignUp_OnClicked"/>
             </StackLayout>
-            <StackLayout Grid.Row="2" Padding="20" Orientation="Horizontal" HorizontalOptions="Center" >
+            <StackLayout Grid.Row="5" Padding="20" Orientation="Horizontal" HorizontalOptions="Center" >
                 <Label Text="Or " />
                 <StackLayout Spacing="0">
                     <Label Text="SIGN IN WITH EXISTING ACCOUNT" FontAttributes="Bold" />
