@@ -31,5 +31,9 @@ namespace CookieHuntApp.Pages
                 await Navigation.PopToRootAsync();
             }
         }
+        private void TapSignIn_OnTapped(object sender, EventArgs e)
+        {
+        Navigation.PushAsync(new SignInPage());
+        }
     }
 }
